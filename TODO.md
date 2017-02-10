@@ -1,2 +1,2 @@
-- [ ] Update Webpack plugins?
+- [x] Update Webpack plugins?
 - [ ] Styled components?
