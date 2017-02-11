@@ -1,2 +1,3 @@
 - [x] Update Webpack plugins?
 - [ ] Styled components?
+- [ ] React Motion or velocity-react... Animations at all?
