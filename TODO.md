@@ -1,3 +1,4 @@
 - [x] Update Webpack plugins?
 - [ ] [Styled components](https://github.com/styled-components/styled-components)?
-- [ ] React Motion or velocity-react... Animations at all?
+- [ ] [React Motion](https://github.com/chenglou/react-motion) or [velocity-react](https://github.com/twitter-fabric/velocity-react).
+- [ ] Animations at all?
