@@ -1,4 +1,5 @@
 - [x] Update Webpack plugins?
 - [ ] [Styled components](https://github.com/styled-components/styled-components)?
+- [ ] Sass/SCSS/Less for styling? They're pretty easy to drop into Webpack.
 - [ ] [React Motion](https://github.com/chenglou/react-motion) or [velocity-react](https://github.com/twitter-fabric/velocity-react).
 - [ ] Animations at all?
