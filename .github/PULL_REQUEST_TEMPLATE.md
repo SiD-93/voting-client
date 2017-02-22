@@ -1,6 +1,6 @@
 ## Description
 
-Describe your change succinctly.
+Describe change(s) succinctly.
 
 ### Tech change(s)
 -
