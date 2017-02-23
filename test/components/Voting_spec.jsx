@@ -51,4 +51,25 @@ describe('Voting', () => {
 
     expect(buttons[0].textContent).to.contain('Voted');
   });
+
+  it('renders as a pure component', () => {
+    const pair = ['Following', 'Memento'];
+    const container = document.createElement('div');
+
+    let component = ReactDOM.render(
+      <Voting pair={pair} />,
+      container
+    );
+
+    let firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
+    expect(firstButton.textContent).to.equal('Following');
+
+    pair[0] = 'Dunkirk';
+    component = ReactDOM.render(
+      <Voting pair={pair} />,
+      container
+    );
+    firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
+    expect(firstButton.textContent).to.equal('Following');
+  });
 });
