@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate } from 'react-addons-test-utils';
+import { List } from 'immutable';
 import { expect } from 'chai';
 
 import Voting from '../../src/components/Voting';
@@ -50,5 +51,26 @@ describe('Voting', () => {
     const buttons = scryRenderedDOMComponentsWithTag(component, 'button');
 
     expect(buttons[0].textContent).to.contain('Voted');
+  });
+
+  it('renders as a pure component', () => {
+    const pair = List.of('Following', 'Memento');
+    const container = document.createElement('div');
+
+    let component = ReactDOM.render(
+      <Voting pair={pair} />,
+      container
+    );
+
+    let firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
+    expect(firstButton.textContent).to.equal('Following');
+
+    pair[0] = 'Dunkirk';
+    component = ReactDOM.render(
+      <Voting pair={pair} />,
+      container
+    );
+    firstButton = scryRenderedDOMComponentsWithTag(component, 'button')[0];
+    expect(firstButton.textContent).to.equal('Following');
   });
 });
