@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { renderIntoDocument, scryRenderedDOMComponentsWithTag, Simulate } from 'react-addons-test-utils';
+import { List } from 'immutable';
 import { expect } from 'chai';
 
 import Voting from '../../src/components/Voting';
@@ -53,7 +54,7 @@ describe('Voting', () => {
   });
 
   it('renders as a pure component', () => {
-    const pair = ['Following', 'Memento'];
+    const pair = List.of('Following', 'Memento');
     const container = document.createElement('div');
 
     let component = ReactDOM.render(
