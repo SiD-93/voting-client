@@ -3,3 +3,4 @@
 - [ ] Sass/SCSS/Less for styling? They're pretty easy to drop into Webpack.
 - [ ] [React Motion](https://github.com/chenglou/react-motion) or [velocity-react](https://github.com/twitter-fabric/velocity-react).
 - [ ] Animations at all?
+- [ ] React PureComponents and why they worked without any plugins (high priority).
