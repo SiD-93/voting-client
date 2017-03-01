@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
-import App from './components/App';
+import { createStore } from 'redux';
 
+import App from './components/App';
 import Voting from './components/Voting';
 import Results from './components/Results';
+import reducer from './reducer';
 
-const pair = ['Following', 'Memento'];
+const store = createStore(reducer);
+
+store.dispatch({
+  type: 'SET_STATE',
+  state: {
+    vote: {
+      pair: ['Memento', 'Following'],
+      tally: {Memento: 2}
+    }
+  }
+});
 
 const routes = <Route component={App}>
   <Route path='/' component={Voting} />
