@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import Winner from './Winner';
 import Vote from './Vote';
 
-export default class Voting extends Component {
+class Voting extends Component {
+  mapStateToProps(state) {
+    return {
+      pair: state.getIn(['vote', 'pair']),
+      winner: state.get('winner')
+    };
+  }
   render() {
     return (
       <div>
@@ -14,3 +21,6 @@ export default class Voting extends Component {
     )
   }
 }
+
+connect(mapStateToProps)(Voting);
+export default Voting;
