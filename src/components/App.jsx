@@ -1,15 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { List, Map } from 'immutable';
+const App = (props) => {
+  return props.children;
+};
 
-const pair = List.of('Following', 'Memento');
-const tally = Map({'Following': 5, 'Memento': 4});
-
-export default class App extends Component {
-  render() {
-    return React.cloneElement(this.props.children, {
-      pair: pair,
-      tally: tally
-    });
-  }
-}
+export default App;
